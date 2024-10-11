@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"; // Importing React and useState hook from React
+import PokemonList from "./components/PokemonList"; // Importing the PokemonList component
+import Navbar from "./components/Navbar"; // Importing the Navbar component
 
-function App() {
+const App = () => {
+  // State variable to hold the current search term entered by the user
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      {/* Navbar component with search functionality */}
+      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-export default App;
+      <div className="App">
+        <h1>Pokémon Characters</h1> 
+        {/* PokemonList component which displays the list of Pokémon based on the search term */}
+        <PokemonList searchTerm={searchTerm} />
+      </div>
+    </>
+  );
+};
+
+export default App; 

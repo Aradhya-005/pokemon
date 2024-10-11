@@ -1,13 +1,95 @@
-body {
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+@font-face {
+  font-family: 'PokemonFont';
+  src: url('./assets/fonts/Pokemon Solid.ttf') format('truetype'); 
+ 
+}
+.pokemon-card {
+  font-weight: 300;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgb(53, 52, 52);
+  text-align: center;
+  margin: 10px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pokemon-card img {
+  width: 200px;
+  height: 200px;
+}
+.pokemon-card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect on hover */
+}
+.App {
+  text-align: center;
+  padding: 20px;
+}
+.App h1{
+  font-family: 'PokemonFont', sans-serif;
+
+  letter-spacing: 4px;
+}
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  padding: 25px; 
+}
+
+.navbar-logo {
+  height: 90px; 
+  margin-bottom: 20px; 
+}
+
+.search-container {
+  display: flex; 
+  align-items: center; 
+  position: relative; 
+}
+
+.search-icon {
+  top: 10px;
+  position: absolute; 
+  right: 10px;
+  width: 20px; 
+  height: 20px; 
+  pointer-events: none; 
+}
+
+.search-bar {
+  width: 400px; 
+  padding: 8px 10px; 
+  padding-left: 40px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  transition: border 0.3s; 
+}
+
+.search-bar:focus {
+  border-color: #007bff; 
+  outline: none; 
 }
