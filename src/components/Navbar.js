@@ -12,7 +12,7 @@ function Navbar({ searchTerm, setSearchTerm }) {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search Pokémon"
+          placeholder="Search characters"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
